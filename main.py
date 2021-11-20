@@ -1,8 +1,12 @@
 import turtle
+
+
+def squares(a):
+    for j in range(len(a)):
+        for i in range(4):
+            turtle.forward(a[j])
+            turtle.right(90)
+
+
 a = list(map(int, input().split()))
-turtle.pencolor("red")
-turtle.circle(max(a))
-a.remove(max(a))
-turtle.pencolor("black")
-for i in range(len(a)):
-    turtle.circle(a[i])
+squares(a)
